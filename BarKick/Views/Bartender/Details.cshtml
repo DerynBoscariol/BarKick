@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<<<<<<< Updated upstream
 <h1>@Model.SelectedBartender.FirstName @Model.SelectedBartender.LastName</h1>
 
 <div>
@@ -12,9 +13,13 @@
     <a class="btn btn-danger" href="~/Bartender/DeleteConfirm/@Model.SelectedBartender.BartenderId">Delete Bartender</a>
     <a class="btn btn-secondary" href="~/Bartender/List">Return to Bartender List</a>
 </div>
+=======
+<h1>Bartender Details</h1>
+>>>>>>> Stashed changes
 
-@if (Model.SelectedBartender != null)
+@if (Model?.SelectedBartender != null)
 {
+<<<<<<< Updated upstream
     <div class="mt-3">
         <h4>Email:</h4>
         <p>@Model.SelectedBartender.Email</p>
@@ -91,3 +96,56 @@ else
     </div>
 }
 
+=======
+    <h3>
+        <a class="btn btn-primary" href="~/Bartender/Edit/@Model.SelectedBartender.BartenderId">Update Bartender</a>
+    </h3>
+    <h3>
+        <a class="btn btn-danger" href="~/Bartender/DeleteConfirm/@Model.SelectedBartender.BartenderId">Delete Bartender</a>
+    </h3>
+    <h4>
+        <a class="btn btn-info" href="~/Bartender/List"> Return to Bartender List</a>
+    </h4>
+
+    <div>
+        Name: @Model.SelectedBartender.FirstName @Model.SelectedBartender.LastName
+    </div>
+    <div>
+        Email: @Model.SelectedBartender.Email
+    </div>
+    <div>
+        <h4>Venues Employed at</h4>
+        <ul>
+            @foreach (var venue in Model.VenueBartenders)
+            {
+                <li>
+                    <a href="/Venue/Details/@venue.VenueID">@venue.Venue.VenueName (@venue.Venue.VenueLocation)</a>
+                </li>
+            }
+        </ul>
+    </div>
+
+    if (Model.CocktailsMade != null && Model.CocktailsMade.Any())
+    {
+        <div style="margin-top: 20px;">
+            <h4>Cocktails Created By @Model.SelectedBartender.FirstName</h4>
+            <ul>
+                @foreach (var cocktail in Model.CocktailsMade)
+                {
+                    <li>
+                        <a href="/Cocktail/Details/@cocktail.DrinkId">@cocktail.DrinkName</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+    else
+    {
+        <p>No cocktails created by @Model.SelectedBartender.FirstName found.</p>
+    }
+}
+else
+{
+    <p>@ViewBag.ErrorMessage ?? "No details available."</p>
+}
+>>>>>>> Stashed changes

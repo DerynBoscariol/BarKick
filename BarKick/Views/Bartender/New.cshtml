@@ -1,11 +1,14 @@
+<<<<<<< Updated upstream
 ﻿@model IEnumerable<BarKick.Models.BartenderDto>
+=======
+﻿@model IEnumerable<BarKick.Models.VenueDto>
+>>>>>>> Stashed changes
 @{
         ViewBag.Title = "Create";
         Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,6 +17,7 @@
 <body>
     <h1>Create a Bartender</h1>
     <form action="/Bartender/Create" method="POST">
+<<<<<<< Updated upstream
         <div class="m-2">
             <label>First Name:</label> <input type="text" name="FirstName" />
         </div>
@@ -25,6 +29,32 @@
         </div>
         <div>
             <input class="m-2 btn btn-success" type="submit" value="Add Bartender" />
+=======
+        <div>
+            <label for="FirstName">First Name:</label>
+            <input type="text" id="FirstName" name="FirstName" required />
+        </div>
+        <div>
+            <label for="LastName">Last Name:</label>
+            <input type="text" id="LastName" name="LastName" required />
+        </div>
+        <div>
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email" required />
+        </div>
+        <div>
+            <label for="VenueIDInput">Select Venue:</label>
+            <select id="VenueIDInput" name="VenueID" required>
+                <option disabled selected hidden>--Select Venue--</option>
+                @foreach (var venue in Model)
+                {
+                    <option value="@venue.VenueID">@venue.VenueName (@venue.VenueLocation)</option>
+                }
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Create Bartender" />
+>>>>>>> Stashed changes
         </div>
     </form>
     <div>

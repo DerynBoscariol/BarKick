@@ -29,6 +29,7 @@ namespace BarKick.Controllers
         // GET: Venue/List
         public ActionResult List()
         {
+            List<VenueDto> VenueDtos = new List<VenueDto>();
             string url = "VenueData/ListVenues";
             HttpResponseMessage response = client.GetAsync(url).Result;
             IEnumerable<VenueDto> venues = response.Content.ReadAsAsync<IEnumerable<VenueDto>>().Result;

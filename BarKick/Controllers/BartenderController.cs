@@ -9,7 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+<<<<<<< Updated upstream
 using System.Net.Http.Headers;
+=======
+using System.Linq;
+>>>>>>> Stashed changes
 
 namespace BarKick.Controllers
 {
@@ -60,15 +64,21 @@ namespace BarKick.Controllers
             DetailsBartender viewModel = new DetailsBartender();
 
             // Fetch bartender details
+<<<<<<< Updated upstream
             string url = "BartenderData/FindBartender/" + id;
             HttpResponseMessage responseMessage = client.GetAsync(url).Result;
+=======
+            string bartenderUrl = "api/bartenderdata/findbartender/{id}";
+            HttpResponseMessage bartenderResponse = client.GetAsync(bartenderUrl).Result;
+>>>>>>> Stashed changes
 
-            if (responseMessage.IsSuccessStatusCode)
+            if (bartenderResponse.IsSuccessStatusCode)
             {
-                string responseData = responseMessage.Content.ReadAsStringAsync().Result;
-                BartenderDto selectedBartender = JsonConvert.DeserializeObject<BartenderDto>(responseData);
+                string bartenderData = bartenderResponse.Content.ReadAsStringAsync().Result;
+                BartenderDto selectedBartender = JsonConvert.DeserializeObject<BartenderDto>(bartenderData);
                 viewModel.SelectedBartender = selectedBartender;
             }
+<<<<<<< Updated upstream
             else if (responseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 ViewBag.ErrorMessage = "Bartender not found.";
@@ -92,22 +102,34 @@ namespace BarKick.Controllers
             else
             {
                 ViewBag.ErrorMessage = "Failed to fetch associated venues.";
+=======
+            else
+            {
+                ViewBag.ErrorMessage = "Failed to fetch bartender details.";
+                return View(viewModel);
+>>>>>>> Stashed changes
             }
 
             // Fetch cocktails made by bartender
-            string cocktailsUrl = "cocktaildata/listcocktailsbybartender/" + id;
+            string cocktailsUrl = "api/cocktaildata/listcocktailsbybartender/{id}";
             HttpResponseMessage cocktailsResponse = client.GetAsync(cocktailsUrl).Result;
 
             if (cocktailsResponse.IsSuccessStatusCode)
             {
                 string cocktailsData = cocktailsResponse.Content.ReadAsStringAsync().Result;
+<<<<<<< Updated upstream
                 viewModel.CocktailsMade = JsonConvert.DeserializeObject<IEnumerable<CocktailDto>>(cocktailsData);
+=======
+                ICollection<CocktailDto> cocktailsMade = JsonConvert.DeserializeObject<ICollection<CocktailDto>>(cocktailsData);
+                viewModel.CocktailsMade = cocktailsMade;
+>>>>>>> Stashed changes
             }
             else
             {
                 ViewBag.ErrorMessage = "Failed to fetch cocktails made by bartender.";
             }
 
+<<<<<<< Updated upstream
 
             // Fetch available venues (for association)
             string availableVenuesUrl = "VenueData/ListVenues/";
@@ -123,9 +145,44 @@ namespace BarKick.Controllers
         }
 
         // GET: Bartender/New
-        public ActionResult New()
+=======
+            // Fetch venues employed at
+            string venuesUrl = "api/venuedata/listvenuesbybartender/{id}";
+            HttpResponseMessage venuesResponse = client.GetAsync(venuesUrl).Result;
+
+            if (venuesResponse.IsSuccessStatusCode)
+            {
+                string venuesData = venuesResponse.Content.ReadAsStringAsync().Result;
+                ICollection<VenueBartender> venueBartenders = JsonConvert.DeserializeObject<ICollection<VenueBartender>>(venuesData);
+                viewModel.VenueBartenders = venueBartenders;
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Failed to fetch venues employed at.";
+            }
+
+            return View(viewModel);
+        }
+
+
+        public ActionResult Error()
         {
             return View();
+        }
+
+        private ApplicationDbContext db = new ApplicationDbContext();
+>>>>>>> Stashed changes
+        public ActionResult New()
+        {
+            var venues = db.Venues.Select(v => new VenueDto
+            {
+                VenueID = v.VenueID,
+                VenueName = v.VenueName,
+                VenueLocation = v.VenueLocation
+            }).ToList();
+
+            return View(venues);
+
         }
 
         // POST: bartender/create

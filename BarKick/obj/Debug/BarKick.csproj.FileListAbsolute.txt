@@ -125,5 +125,10 @@ C:\Users\deryn\source\repos\BarKick\BarKick\obj\Debug\BarKick.pdb
 C:\Users\deryn\source\repos\BarKick\BarKick\obj\Debug\BarKick.Migrations.InitialCreate.resources
 C:\Users\deryn\source\repos\BarKick\BarKick\obj\Debug\BarKick.csproj.GenerateResource.cache
 C:\Users\deryn\source\repos\BarKick\BarKick\obj\Debug\BarKick.Migrations.VenuesinBartenderDetailsViewModel.resources
+<<<<<<< Updated upstream
 =======
 >>>>>>> c6b3319180a8b7b2f5646d373f4055e01607692f
+=======
+C:\Users\deryn\source\repos\BarKick\BarKick\obj\Debug\BarKick.Migrations.ListVenuesViewModel.resources
+C:\Users\deryn\source\repos\BarKick\BarKick\obj\Debug\BarKick.Migrations.VenueModelUpdate.resources
+>>>>>>> Stashed changes

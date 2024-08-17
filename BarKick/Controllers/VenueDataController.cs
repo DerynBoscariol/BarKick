@@ -354,6 +354,31 @@ namespace BarKick.Controllers
         }
 
 
+        [HttpGet]
+        [Route("api/VenueData/ListVenuesByBartender/{bartenderId}")]
+        public IEnumerable<VenueBartender> ListVenuesByBartender(int bartenderId)
+        {
+            List<VenueBartender> venueBartenders = db.Venues
+                                                    .SelectMany(v => v.VenueBartenders
+                                                    .Where(vb => vb.BartenderId == bartenderId))
+                                                    .ToList();
+
+            List<VenueBartender> venueBartendersList = new List<VenueBartender>();
+            venueBartenders.ForEach(vb => venueBartendersList.Add(new VenueBartender()
+            {
+                VenueID = vb.VenueID,
+                BartenderId = vb.BartenderId,
+                Venue = new Venue
+                {
+                    VenueID = vb.Venue.VenueID,
+                    VenueName = vb.Venue.VenueName,
+                    VenueLocation = vb.Venue.VenueLocation
+                }
+            }));
+
+            return venueBartendersList;
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
