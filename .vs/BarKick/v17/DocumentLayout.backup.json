@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\deryn\\source\\repos\\BarKick\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{C7233E61-D63A-4559-9612-29E9E383F425}|BarKick\\BarKick.csproj|c:\\users\\deryn\\source\\repos\\barkick\\barkick\\migrations\\202408021549284_venuesinbartenderdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7233E61-D63A-4559-9612-29E9E383F425}|BarKick\\BarKick.csproj|solutionrelative:barkick\\migrations\\202408021549284_venuesinbartenderdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,6 +14,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C7233E61-D63A-4559-9612-29E9E383F425}|BarKick\\BarKick.csproj|c:\\users\\deryn\\source\\repos\\barkick\\barkick\\views\\bartender\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C7233E61-D63A-4559-9612-29E9E383F425}|BarKick\\BarKick.csproj|solutionrelative:barkick\\views\\bartender\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+      "AbsoluteMoniker": "D:0:0:{C7233E61-D63A-4559-9612-29E9E383F425}|BarKick\\BarKick.csproj|c:\\users\\deryn\\source\\repos\\barkick\\barkick\\views\\bartender\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7233E61-D63A-4559-9612-29E9E383F425}|BarKick\\BarKick.csproj|solutionrelative:barkick\\views\\bartender\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> c6b3319180a8b7b2f5646d373f4055e01607692f
     }
   ],
   "DocumentGroupContainers": [
@@ -27,6 +32,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "202408021549284_VenuesinBartenderDetailsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\deryn\\source\\repos\\BarKick\\BarKick\\Migrations\\202408021549284_VenuesinBartenderDetailsViewModel.cs",
               "RelativeDocumentMoniker": "BarKick\\Migrations\\202408021549284_VenuesinBartenderDetailsViewModel.cs",
@@ -61,6 +67,16 @@
               "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-02T15:44:07.209Z",
+=======
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\deryn\\source\\repos\\BarKick\\BarKick\\Views\\Bartender\\Error.cshtml",
+              "RelativeDocumentMoniker": "BarKick\\Views\\Bartender\\Error.cshtml",
+              "ToolTip": "C:\\Users\\deryn\\source\\repos\\BarKick\\BarKick\\Views\\Bartender\\Error.cshtml",
+              "RelativeToolTip": "BarKick\\Views\\Bartender\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T19:15:29.817Z",
+>>>>>>> c6b3319180a8b7b2f5646d373f4055e01607692f
               "EditorCaption": ""
             },
             {
@@ -70,12 +86,16 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> c6b3319180a8b7b2f5646d373f4055e01607692f
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+<<<<<<< HEAD
             },
             {
               "$type": "Document",
@@ -103,6 +123,8 @@
               "WhenOpened": "2024-08-16T19:15:29.817Z",
               "EditorCaption": ""
 >>>>>>> Stashed changes
+=======
+>>>>>>> c6b3319180a8b7b2f5646d373f4055e01607692f
             }
           ]
         }
