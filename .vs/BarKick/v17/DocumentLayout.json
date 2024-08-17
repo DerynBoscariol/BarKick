@@ -40,7 +40,11 @@
               "RelativeDocumentMoniker": "BarKick\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\deryn\\source\\repos\\BarKick\\BarKick\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "BarKick\\Views\\Home\\Index.cshtml",
+<<<<<<< HEAD
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAASAAAAAAAAAA==",
+=======
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAADnAAAAAAAAAA==",
+>>>>>>> c6b3319180a8b7b2f5646d373f4055e01607692f
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-16T19:18:43.369Z",
               "EditorCaption": ""
